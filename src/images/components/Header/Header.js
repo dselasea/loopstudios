@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './Header.module.css'
 import Logo from '../../../images/logo.svg'
+import Hamburger from '../../../images/icon-hamburger.svg'
+import Close from '../../../images/icon-close.svg'
 
 export const Header = () => {
   return (
@@ -15,7 +17,13 @@ export const Header = () => {
                 <li><a href="/">Products</a></li>
                 <li><a href="/">Support</a></li>
             </ul>
+            <div className={styles.toggle}>
+            <img src={Hamburger} alt="Hamburger" />
+            <img src={Close} alt="Close Menu" />
+            </div>
             </nav>
+
+            <h1 className={styles.heading}><span className={styles.brk1}>Immersive</span> <span className={styles.brk1}>experiences</span> <span className={styles.brk2}>that</span> deliver</h1>
         </div>
     </header>
   )

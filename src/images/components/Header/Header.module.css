@@ -4,9 +4,10 @@
 }
 
 .container {
-    width: 1040px;
+    width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem;
 }
 
 .nav {
@@ -34,8 +35,38 @@
 .nav_items li a::before {
     content: "";
     position: absolute;
+    right: 50%;
     left: 50%;
-    height: 5px;
-    width: 100%;
-    color: red;
+    transform: translate(-50%, -50%);
+    top: 47px;
+    height: 2px;
+    width: 35%;
+    background-color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.nav_items li a:hover::before {
+    opacity: 1;
+}
+
+.toggle {
+    display: none;
+}
+
+.heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 5rem;
+    border: 2px solid #fff;
+    padding: 1.5rem;
+    line-height: 1.2;
+    width: 55%;
+}
+
+.brk1 {
+    display: block;
 }
