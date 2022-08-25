@@ -1,27 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Header.module.css'
 import Logo from '../../../images/logo.svg'
 import Hamburger from '../../../images/icon-hamburger.svg'
 import Close from '../../../images/icon-close.svg'
+import Nav from './Nav'
 
 export const Header = () => {
+    const [navOpen, setNavOpen] = useState(false)
+    
   return (
     <header className={styles.header}>
         <div className={styles.container}>
-            <nav className={styles.nav}>
-            <img src={Logo} alt="Loop Studios Logo" />
-            <ul className={styles.nav_items}>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Careers</a></li>
-                <li><a href="/">Events</a></li>
-                <li><a href="/">Products</a></li>
-                <li><a href="/">Support</a></li>
-            </ul>
-            <div className={styles.toggle}>
-            <img src={Hamburger} alt="Hamburger" />
-            <img src={Close} alt="Close Menu" />
-            </div>
+            <div  className={styles.nav}>
+            <img src={Logo} alt="Loop Studios Logo" className={styles.logo}/>
+            <nav>
+            <Nav navOpen={navOpen}/>
             </nav>
+            <div className={styles.toggle} onClick={() => setNavOpen(!navOpen)}>
+                {navOpen ? <img src={Close} alt="Close Menu" /> : <img src={Hamburger} alt="Hamburger" />}
+            </div>
+            </div>
 
             <h1 className={styles.heading}><span className={styles.brk1}>Immersive</span> <span className={styles.brk1}>experiences</span> <span className={styles.brk2}>that</span> deliver</h1>
         </div>
