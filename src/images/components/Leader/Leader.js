@@ -1,5 +1,6 @@
 import React from 'react'
 import Interactive from '../../mobile/image-interactive.jpg'
+import InteractiveD from '../../desktop/image-interactive.jpg'
 import styles from './Leader.module.css'
 
 const Leader = () => {
@@ -7,7 +8,8 @@ const Leader = () => {
     <div className={styles.container}>
         <div className={styles.leader}>
             <div className={styles.image}>
-                <img src={Interactive} alt="" />
+                <img className={styles.mobile} src={Interactive} alt="Guy wearging VR" />
+                <img className={styles.img_desktop} src={InteractiveD} alt="Guy wearing VR" />
             </div>
             <div className={styles.text}>
                 <h2>the leader in interactive vr</h2>
