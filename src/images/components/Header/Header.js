@@ -6,7 +6,7 @@ import Close from '../../../images/icon-close.svg'
 import Nav from './Nav'
 
 export const Header = () => {
-    
+    const [nav, setNav] = useState(false)
     
   return (
     <header className={styles.navbarImage}>
@@ -14,11 +14,11 @@ export const Header = () => {
             <div className={styles.navbar}>
             <img src={Logo} alt="Loop Studios Logo" className={styles.logo}/>
             <nav>
-            <Nav/>
+            <Nav nav={nav}/>
             </nav>
-            <div className={styles.mobile_btn}>
-                <img src={Close} alt="Close Menu" />
-                <img src={Hamburger} alt="Hamburger" />
+            <div onClick={() => setNav(!nav)} className={styles.mobile_btn}>
+                {nav ? <img src={Close} alt="Close Menu" /> : <img src={Hamburger} alt="Hamburger" />}
+                
             </div>
 
             </div>
