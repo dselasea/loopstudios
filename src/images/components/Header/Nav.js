@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 
 const Nav = ({navOpen}) => {
   return (
-    <React.Fragment><ul className={navOpen ? [styles.nav_items, styles.active].join('') : [styles.nav_items]}>
+    <React.Fragment><ul className={styles.menu}>
     <li><a href="/">About</a></li>
     <li><a href="/">Careers</a></li>
     <li><a href="/">Events</a></li>

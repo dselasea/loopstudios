@@ -6,21 +6,22 @@ import Close from '../../../images/icon-close.svg'
 import Nav from './Nav'
 
 export const Header = () => {
-    const [navOpen, setNavOpen] = useState(false)
+    
     
   return (
-    <header className={styles.header}>
+    <header className={styles.navbarImage}>
         <div className={styles.container}>
-            <div  className={styles.nav}>
+            <div className={styles.navbar}>
             <img src={Logo} alt="Loop Studios Logo" className={styles.logo}/>
             <nav>
-            <Nav navOpen={navOpen}/>
+            <Nav/>
             </nav>
-            <div className={styles.toggle} onClick={() => setNavOpen(!navOpen)}>
-                {navOpen ? <img src={Close} alt="Close Menu" /> : <img src={Hamburger} alt="Hamburger" />}
-            </div>
+            <div className={styles.mobile_btn}>
+                <img src={Close} alt="Close Menu" />
+                <img src={Hamburger} alt="Hamburger" />
             </div>
 
+            </div>
             <h1 className={styles.heading}><span className={styles.brk1}>Immersive</span> <span className={styles.brk1}>experiences</span> <span className={styles.brk2}>that</span> deliver</h1>
         </div>
     </header>

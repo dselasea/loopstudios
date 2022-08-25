@@ -1,4 +1,4 @@
-.header {
+.navbarImage {
     background: url('../../desktop/image-hero.jpg') no-repeat center/cover;
     padding-bottom: 10rem;
 }
@@ -10,25 +10,27 @@
     padding: 2rem;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     z-index: 20;
 }
 
-.nav {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-}
-
-
-.nav_items {
+.menu li {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.nav_items li a {
+.menu li a {
     text-decoration: none;
     color: #fff;
     padding: 1rem;
@@ -36,25 +38,29 @@
     position: relative;
 }
 
-.nav_items li a::before {
+.menu li a:last-child {
+    padding-right: 0;
+}
+
+.menu li a::before {
     content: "";
     position: absolute;
     right: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     top: 47px;
     height: 2px;
-    width: 35%;
+    width: 30%;
     background-color: #fff;
     opacity: 0;
     transition: 0.3s;
 }
 
-.nav_items li a:hover::before {
+.menu li a:hover::before {
     opacity: 1;
 }
 
-.toggle {
+.mobile_btn {
     display: none;
 }
 
@@ -76,28 +82,9 @@
 }
 
 @media  screen and (max-width: 768px){
-    .header {
+    .nav {
         background: url('../../mobile/image-hero.jpg') no-repeat center/cover;
     }
-
-    .toggle {
-        display: block;
-        z-index: 20;
-    }
-
-    .nav_items {
-        flex-direction: column;
-        align-items: flex-start;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-        background-color: #000;
-    }
-
-    
 
     .heading {
         width: 100%;
