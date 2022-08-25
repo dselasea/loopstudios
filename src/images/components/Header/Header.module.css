@@ -1,6 +1,6 @@
 .header {
     background: url('../../desktop/image-hero.jpg') no-repeat center/cover;
-    height: 80vh;
+    padding-bottom: 10rem;
 }
 
 .container {
@@ -69,4 +69,22 @@
 
 .brk1 {
     display: block;
+}
+
+@media  screen and (max-width: 768px){
+    .header {
+        background: url('../../mobile/image-hero.jpg') no-repeat center/cover;
+    }
+    .nav_items {
+        display: none;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .heading {
+        width: 100%;
+        font-size: 2rem;
+    }
 }
