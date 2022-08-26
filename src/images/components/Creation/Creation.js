@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Creations.module.css'
+import styles from './Creation.module.css'
 
 const Creation = () => {
   return (
