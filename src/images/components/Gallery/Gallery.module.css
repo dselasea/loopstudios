@@ -79,6 +79,13 @@
 }
 
 @media screen and (min-width: 768px){
+    .container {
+        padding-bottom: 8rem;
+    }
+    .container .btn {
+        display: none;
+    }
+
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
