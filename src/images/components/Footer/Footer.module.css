@@ -32,6 +32,25 @@
     text-decoration: none;
     color: #fff;
     font-size: 400;
+    position: relative;
+}
+
+.menu li a::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background: #fff;
+    top: 30px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+    opacity: 0;
+}
+
+.menu li a:hover::before {
+    opacity: 1;
 }
 
 .social_links {
@@ -46,8 +65,14 @@
 .social_links .social img {
     padding: 1rem 0;
     margin-left: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: all .3s;
 }
 
+.social_links .social img:hover {
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
 .social_links p {
     color: hsl(0, 0%, 55%);
     padding: 0.5rem 0;
