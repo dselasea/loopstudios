@@ -1,0 +1,65 @@
+.container {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container .btn {
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    background: #fff;
+    font-family: 'Alata', sans-serif;
+    font-size: 1rem;
+    border: 2px solid #000;
+    margin-top: 3rem;
+}
+
+.gallery {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.gallery div {
+    position: relative;
+}
+
+.gallery div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.gallery div:hover::before {
+    opacity: 0.5;
+    transition: all .3s;
+}
+
+
+
+.gallery div:hover .title {
+    color: #000;
+    z-index: 20;
+    transition: all .3s;
+}
+
+.gallery .image {
+    width: 100%;
+    height: auto;
+}
+
+.gallery .title {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
