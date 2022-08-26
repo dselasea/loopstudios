@@ -7,7 +7,7 @@
 }
 
 .container h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     text-transform: uppercase;
@@ -27,5 +27,22 @@
     color: #fff;
     background:#000;
     transition: all .3s;
+}
+
+@media screen and (min-width: 768px){
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container h3 {
+        text-align: left;
+        font-size: 1.8rem;
+    }
+
+    .container .btn {
+        display: block;
+    }
 }
 
