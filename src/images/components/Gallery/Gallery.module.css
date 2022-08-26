@@ -3,6 +3,7 @@
     max-width: 100%;
     margin: 0 auto;
     padding: 2rem;
+    text-align: center;
 }
 
 .container .btn {
@@ -13,6 +14,7 @@
     font-size: 1rem;
     border: 2px solid #000;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .gallery {
@@ -54,6 +56,10 @@
     height: auto;
 }
 
+.gallery .imageD {
+    display: none;
+}
+
 .gallery .title {
     position: absolute;
     left: 1.5rem;
@@ -62,4 +68,25 @@
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
     font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px){
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery .image {
+        display: none;
+    }
+
+    .gallery .imageD {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
